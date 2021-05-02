@@ -14,5 +14,14 @@
 2. Run the project with `npm start` or `yarn`
 3. Enjoy :) Remember to clear your redux-persist localStorage if you have previous values in your `localhost:3000`. 
 
+# Design
+The design was not made by me, it was created following a pre-made prototype.
+
+# What is missing
+1. Unit tests
+
 # Deployment
 If you want to see the app on the web, just visit: https://pizza.ncesar.com
+
+# Liting
+I'm using React's default ESLint configuration.
