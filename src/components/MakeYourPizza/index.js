@@ -20,6 +20,7 @@ import {
 } from './styled';
 import { useSelector } from 'react-redux';
 import { Button } from 'components/Button';
+import { formatNumberToBRL } from 'utils';
 
 export const MakeYourPizza = ({
   onNextButtonClick,
@@ -65,15 +66,14 @@ export const MakeYourPizza = ({
               </PizzaIngredientTitle>
             </PizzaInfoWrapper>
             <PizzaValueWrapper>
-              <PizzaPrice>R$ </PizzaPrice>
-              <PizzaPrice bold>{pizza.price}</PizzaPrice>
+              <PizzaPrice bold>{formatNumberToBRL(pizza.price)}</PizzaPrice>
             </PizzaValueWrapper>
           </PizzaInfoWrapper>
         </PizzaContentWrapper>
       ))}
       <ButtonWrapper>
         <PizzaTotalPrice className="pizza-total-price">
-          Valor parcial: R$ {price.toLocaleString('pt-br')}
+          Valor parcial: {formatNumberToBRL(price)}
         </PizzaTotalPrice>
         <PizzaButtonErrorWrapper>
           <Button onClick={onClickHandler}>

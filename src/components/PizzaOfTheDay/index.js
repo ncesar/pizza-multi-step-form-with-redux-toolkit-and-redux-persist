@@ -22,6 +22,7 @@ import {
 import { useDispatch } from 'react-redux';
 import { incrementPoints } from 'redux/points';
 import { toast } from 'react-toastify';
+import { formatNumberToBRL } from 'utils';
 
 export const PizzaOfTheDay = ({ pizzaInfo, hideButton = false, label }) => {
   const dispatch = useDispatch();
@@ -43,10 +44,7 @@ export const PizzaOfTheDay = ({ pizzaInfo, hideButton = false, label }) => {
       <PizzaTitle>{label || 'Pizza do dia:'}</PizzaTitle>
       <PizzaContentWrapper className="pizza-content-wrapper">
         <PizzaImage
-          src={
-            image ||
-            'https://blog.praticabr.com/wp-content/uploads/2019/06/Pizza-Pizzaria-Forno-Forza-Express.jpg'
-          }
+          src={image || 'https://i.imgur.com/MHyET8s.png'}
           alt="Pizza image"
         />
         <PizzaDetailsWrapper>
@@ -64,8 +62,7 @@ export const PizzaOfTheDay = ({ pizzaInfo, hideButton = false, label }) => {
           <PizzaSecondaryDetails>
             <PizzaPriceWrapper>
               <PizzaValueWrapper>
-                <PizzaPrice>R$ </PizzaPrice>
-                <PizzaPrice bold>{price.toLocaleString('pt-br')}</PizzaPrice>
+                <PizzaPrice bold>{formatNumberToBRL(price)}</PizzaPrice>
               </PizzaValueWrapper>
             </PizzaPriceWrapper>
             {!hideButton && (
