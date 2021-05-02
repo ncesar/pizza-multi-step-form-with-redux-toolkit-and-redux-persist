@@ -29,12 +29,12 @@ function App() {
       <Header />
       <AnimatePresence>
         <Switch>
+          <Route exact path="/" component={Homepage} />
           <StepRouter path="/step2" component={Step2} step="size" />
           <StepRouter path="/step3" component={Step3} step="dough" />
           <StepRouter path="/result" component={Result} step="border" />
         </Switch>
       </AnimatePresence>
-      <Route exact path="/" component={Homepage} />
     </Router>
   );
 }
