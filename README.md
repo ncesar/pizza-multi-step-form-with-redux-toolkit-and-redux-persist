@@ -17,6 +17,9 @@
 # Design
 The design was not made by me, it was created following a pre-made prototype.
 
+# What is missing
+1. Unit tests
+
 # Deployment
 If you want to see the app on the web, just visit: https://pizza.ncesar.com
 
