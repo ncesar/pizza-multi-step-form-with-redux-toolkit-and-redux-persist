@@ -16,3 +16,6 @@
 
 # Deployment
 If you want to see the app on the web, just visit: https://pizza.ncesar.com
+
+# Liting
+I'm using React's default ESLint configuration.
