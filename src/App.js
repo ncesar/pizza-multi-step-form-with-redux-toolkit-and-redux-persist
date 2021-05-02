@@ -5,27 +5,16 @@ import { Step2 } from 'layout/Step2';
 import { Step3 } from 'layout/Step3';
 import { Result } from 'layout/Result';
 import { Header } from 'components/Header';
-import { ToastContainer } from 'react-toastify';
 import { AnimatePresence } from 'framer-motion';
 import { StepRouter } from 'StepRouter';
 import { GlobalStyle } from 'components/GlobalStyle';
-import 'react-toastify/dist/ReactToastify.css';
+import { Toast } from 'components/Toast';
 
 function App() {
   return (
     <Router>
       <GlobalStyle />
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
+      <Toast />
       <Header />
       <AnimatePresence>
         <Switch>
