@@ -19,6 +19,7 @@ export const Homepage = () => {
   };
   useEffect(() => {
     dispatch(resetPizza());
+    window.scrollTo(0, 0);
   }, [dispatch]);
 
   // getting a random pizza from data/pizza.js

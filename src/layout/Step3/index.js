@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { MakeYourPizza } from 'components/MakeYourPizza';
@@ -29,6 +29,9 @@ export const Step3 = () => {
     history.push('/result');
   };
   const { step } = useSelector((state) => state.pizzaInfo.border);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <MotionWrapper>
       <HomepageWrapper>

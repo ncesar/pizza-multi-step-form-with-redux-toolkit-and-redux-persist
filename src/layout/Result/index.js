@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Button } from 'components/Button';
 import { PizzaOfTheDay } from 'components/PizzaOfTheDay';
 import { useDispatch, useSelector } from 'react-redux';
@@ -26,7 +26,9 @@ export const Result = () => {
     price,
     points: 50,
   };
-
+  useEffect(() => {
+    window.scrollTo(0, 150);
+  }, []);
   return (
     <MotionWrapper>
       <ResultWrapper>

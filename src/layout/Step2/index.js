@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { MakeYourPizza } from 'components/MakeYourPizza';
@@ -16,6 +16,9 @@ export const Step2 = () => {
     dispatch(sumPrice(price));
     history.push('/step3');
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const { step } = useSelector((state) => state.pizzaInfo.dough);
   return (
     <MotionWrapper>

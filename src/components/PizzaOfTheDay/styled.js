@@ -21,6 +21,10 @@ export const PizzaWrapper = styled.main`
     .pizza-content-wrapper {
       flex-direction: column;
     }
+    img {
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
   }
 `;
 export const PizzaTitle = styled.h1`

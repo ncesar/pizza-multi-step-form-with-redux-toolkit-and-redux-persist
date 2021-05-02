@@ -23,6 +23,10 @@ export const PizzaWrapper = styled.div`
     .pizza-total-price {
       font-size: 12px;
     }
+    img {
+      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: 0;
+    }
   }
 `;
 export const PizzaWrapperTitle = styled.h1`
